@@ -1,42 +1,54 @@
-datedropper
-===========
-Brian's Meteor package wrapper of *DateDropper*, Felice Gattuso's excellent jQuery
+DateDropper - packaged for meteor
+============================
+Brian's Meteor package wrapper of [DateDropper](http://bit.ly/17ab6dt), Felice Gattuso's excellent jQuery
  plugin that provides a quick and easy way to manage dates for input fields.
 
+
+
+Meteor Installation
+-------------------
+In a Meteor app directory, enter:
 ```
 meteor add bjimdar:datedropper
 ```
 
 
-###Meteor Usage###
+Meteor Usage
+------------
+DateDropper extends any input form field of type="text" to allow date formatting.
+
+Since dateDropper is a jQuery plugin, typically you would call it in the rendered
+ callback of your template. Use a jQuery css-style selector string to select
+ the controls you want to enable dateDropper on.
+
+**Note**: using `this.$()` is an optimization in Meteor projects that will cause 
+jQuery to only search this template for selector matches.
+This can be quite a bit faster then using $() which will search the entire DOM.
 
 ```js
-  $('.any-text-input-selector').dateDropper();
+Template.foo.rendered = function() {
+  this.$('#input-text').dateDropper();
+}
 ```
 
 
-###Options###
+Options
+-------
+
+You can specify options to customize dateDropper on the initial 
+ dateDropper function call as follows:
 
 ```js
   var options = {           
-    format:'m/d/Y',         
-    lang: 'en',             
-    placeholder: 'select date',
-    minYear: 1970,
-    maxYear: 2016,              //default is none
-    animation: 'fadein',
-    color: '#f87a54',
-    years_multiple: 10,         //default is 1
-    animate_current: true,
-    lock: 'from'
+    format:'m/d/Y',                     
+    placeholder: 'choose date...',
   };
 
-  $( ".any-text-input-selector" ).dateDropper(options);
+  $( ".date-field-selector" ).dateDropper(options);
 
 ```
 
 
-#Options#
 The following options can be passed in to the dateDropper call:
 
 ## format
@@ -73,20 +85,18 @@ format='n/j/Y'    | `"4/1/2001"`             | No-padding. Slashes ok
   
 ## lang
 
-Display Language to use. Default is `en` for US-English
+Display Language to use for Month name and Day-of-week
 
-Possible Options:
-Code  | Language                   
-:---: |:---                      
-en    | English
-it    | Italian
-hu    | hungarian
-es    | espanol
-de    | deustche
-nl    | dutch
-fr    | francais
-pt    | portuguese
-si    | slovenian
+
+* `en` - English (default)
+* `it` - Italian
+* `hu` - Hungarian
+* `es` - Espanol
+* `de` - Deustche
+* `nl` - Dutch
+* `fr` - Francais
+* `pt` - Portuguese
+* `si` - Slovenian
 
 
 
@@ -95,11 +105,13 @@ A text value to insert into text input when no value is set.
 Default value is `"Select date"`.
 
 ## minYear
-The oldest year the control will allow. 
+The oldest year the control will allow.  
+
 Default value is `1970`.
 
 ## maxYear
-The highest year value the control will allow.
+The highest year value the control will allow.  
+
 Default value is current year.
 
 ## animation
