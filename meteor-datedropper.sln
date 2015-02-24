@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22512.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3C4676CB-648A-4F03-8166-1E779719CBB5}"
+	ProjectSection(SolutionItems) = preProject
+		datedropper.css = datedropper.css
+		datedropper.js = datedropper.js
+		package.js = package.js
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "icons", "icons", "{62E5CDF4-EDA7-4789-96E5-CDA3DE447DB9}"
+	ProjectSection(SolutionItems) = preProject
+		icons\done.png = icons\done.png
+		icons\done.svg = icons\done.svg
+		icons\next.png = icons\next.png
+		icons\next.svg = icons\next.svg
+		icons\prev.png = icons\prev.png
+		icons\prev.svg = icons\prev.svg
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{62E5CDF4-EDA7-4789-96E5-CDA3DE447DB9} = {3C4676CB-648A-4F03-8166-1E779719CBB5}
+	EndGlobalSection
+EndGlobal
