@@ -1,6 +1,6 @@
 ﻿Package.describe({
   name: "bjimdar:datedropper",
-  version: "1.0.0-0",
+  version: "1.0.0",
   summary: "Fancy date picker for text input. A Meteor wrapper for dateDropper from Felice Gattuso",
   git: "https://github.com/bjimdar/meteor-datedropper",
 });
