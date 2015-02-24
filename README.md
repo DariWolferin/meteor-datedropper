@@ -1,6 +1,6 @@
 DateDropper - packaged for meteor
 ============================
-Brian's Meteor package wrapper of [DateDropper](http://bit.ly/17ab6dt), Felice Gattuso's excellent jQuery
+A Meteor package wrapper of [DateDropper](http://bit.ly/17ab6dt), Felice Gattuso's excellent jQuery
  plugin that provides a quick and easy way to manage dates for input fields.
 
 
@@ -27,7 +27,7 @@ This can be quite a bit faster then using $() which will search the entire DOM.
 
 ```js
 Template.foo.rendered = function() {
-  this.$('#input-text').dateDropper();
+  this.$("#input-text").dateDropper();
 }
 ```
 
@@ -40,8 +40,8 @@ You can specify options to customize dateDropper on the initial
 
 ```js
   var options = {           
-    format:'m/d/Y',                     
-    placeholder: 'choose date...',
+    format:"m/d/Y",                     
+    placeholder: "choose date...",
   };
 
   $( ".date-field-selector" ).dateDropper(options);
@@ -60,27 +60,27 @@ in and will write dates out it.
 
 Code | Description             | Example        
 :---:| ---                      | ---
-`M`  | Short month              | `'Jan' .. 'Dec'`
-`F`  | Long month               | `'January' .. 'December'`
-`m`  | Numeric month            | `'01', '02' .. '12'`)
-`n`  | Non-padded numeric month | `'1' .. '12'`
-`Y`  | Long numeric year        | `'2015'`
-`d`  | Padded numeric day       | `'01', '02' .. '31'`
-`j`  | Non-Padded Numeric day   | `'1', '2' .. '31'`
-`D`  | Short day-of-week        | `'Sun' .. 'Sat'`
-`l`  | Long day-of-week         | `'Sunday' .. 'Saturday'`
+M    | Short month              | `"Jan" .. "Dec"`
+F    | Long month               | `"January" .. "December"`
+m    | Numeric month            | `"01", "02" .. "12"`)
+n    | Non-padded numeric month | `"1" .. "12"`
+Y    | Long numeric year        | `"2015"`
+d    | Padded numeric day       | `"01", "02" .. "31"`
+j    | Non-Padded Numeric day   | `"1", "2" .. "31"`
+D    | Short day-of-week        | `"Sun" .. "Sat"`
+l    | Long day-of-week         | `"Sunday" .. "Saturday"`
 
 
 ###Format String Examples:
 
 Example           | Output                   | Description        
 :---              | ---                      | ---
-format='m-d-Y'    | `"04/01/2001"`           | Default format
-format='m'        | `"04"`                   | specifying 'm' by itself will cause day and year controls to be hidden
-format='Y'        | `"2001"`                 | specifying 'Y' by itself will cause day and Month controls to be hidden
-format='M j, Y'   | `"Apr 1, 2001"`          | Space and commas ok to use
-format='l F j, Y' | `"Sunday April 1, 2001"` | Nice long format
-format='n/j/Y'    | `"4/1/2001"`             | No-padding. Slashes ok
+"m-d-Y"    | "04/01/2001"           | Default format
+"m"        | "04"                   | specifying "m" by itself will cause day and year controls to be hidden
+"Y"        | "2001"                 | specifying "Y" by itself will cause day and Month controls to be hidden
+"M j, Y"   | "Apr 1, 2001"          | Space and commas ok to use
+"l F j, Y" | "Sunday April 1, 2001" | Nice long format
+"n/j/Y"    | "4/1/2001"             | No-padding. Slashes ok
 
   
 ## lang
